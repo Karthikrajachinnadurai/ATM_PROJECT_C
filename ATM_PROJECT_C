@@ -1,0 +1,45 @@
+#include<stdio.h>
+int main()
+{
+    int pin,credit,totalamount,balance=1000,amount,debit,n;
+    printf("enter the pin:");
+    scanf("%d",&pin);
+    if(pin==100){
+        printf("your pin correct");
+        printf("\n1.balance");
+        printf("\n2.credit");
+        printf("\n3.debit");
+        printf("\nenter the choice:");
+        scanf("%d",&n);
+        if(n==1)
+        {
+            printf("\nBalance amount:%d",balance);
+        }
+        else if(n==2){
+            printf("enter the credited amount:");
+            scanf("%d",&credit);
+            amount=credit+balance;
+            printf("\ncredited amount:%d",amount);
+        }
+        else if(n==3){
+             printf("\nenter debited amount:");
+             scanf("%d",&debit);
+             if(debit>=500){
+             printf("\n successfull");
+             totalamount=credit+balance-debit;
+             printf("\ntotal_amount:%d",totalamount);
+             }else{
+                 printf("\n debited is below 500");
+             }
+             }
+             
+        else{
+                 printf("invalid choice");
+        }
+            
+
+    }
+    else{
+        printf("\ninvalid pin");
+    }
+}
